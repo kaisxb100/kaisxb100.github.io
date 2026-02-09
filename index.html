@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Los Twon CFW</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700&family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      margin: 0;
+      background: #0a0a0a;
+      color: #e5e5e5;
+      font-family: 'Cairo', sans-serif;
+    }
+
+    .lang {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      border: 1px solid silver;
+      background: transparent;
+      color: silver;
+      padding: 8px 18px;
+      border-radius: 20px;
+      cursor: pointer;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .box {
+      max-width: 800px;
+    }
+
+    h1 {
+      color: silver;
+      font-size: 3rem;
+    }
+
+    p {
+      font-size: 1.2rem;
+      line-height: 1.8;
+    }
+
+    a {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 40px;
+      border: 1px solid silver;
+      color: silver;
+      text-decoration: none;
+      border-radius: 30px;
+    }
+
+    a:hover {
+      background: silver;
+      color: black;
+    }
+
+    footer {
+      padding: 20px;
+      text-align: center;
+      border-top: 1px solid #333;
+      font-size: 0.9rem;
+      opacity: 0.6;
+    }
+  </style>
+</head>
+
+<body>
+
+<button class="lang" onclick="switchLang()">EN</button>
+
+<section class="hero">
+  <div class="box">
+    <h1 id="title">مرحباً، أنا كاي</h1>
+    <p id="text">
+      المعروف لا يُعرّف.<br>
+      صاحب سيرفر فايف إم <b>Los Twon CFW</b>.<br>
+      شرفتونا ونورتونا في سيرفرنا.
+    </p>
+
+    <a href="https://discord.gg/L1T" target="_blank">Join Discord</a>
+  </div>
+</section>
+
+<footer>
+  © 2026 Los Twon CFW — Kai
+</footer>
+
+<script>
+  let ar = true;
+  function switchLang(){
+    if(ar){
+      document.documentElement.lang="en";
+      document.documentElement.dir="ltr";
+      document.body.style.fontFamily="Poppins, sans-serif";
+      title.innerText="Hello, I’m Kai";
+      text.innerHTML="A name that needs no introduction.<br>Owner of the FiveM server <b>Los Twon CFW</b>.<br>You’re always welcome.";
+      document.querySelector(".lang").innerText="AR";
+      ar=false;
+    } else {
+      document.documentElement.lang="ar";
+      document.documentElement.dir="rtl";
+      document.body.style.fontFamily="Cairo, sans-serif";
+      title.innerText="مرحباً، أنا كاي";
+      text.innerHTML="المعروف لا يُعرّف.<br>صاحب سيرفر فايف إم <b>Los Twon CFW</b>.<br>شرفتونا ونورتونا في سيرفرنا.";
+      document.querySelector(".lang").innerText="EN";
+      ar=true;
+    }
+  }
+</script>
+
+</body>
+</html>
